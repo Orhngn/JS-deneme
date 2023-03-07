@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Deneme</title>
+</head>
+
+<body>
+    <center>
+        <h1>JavaScript Deneme</h1>
+    </center>
+    <input type="number" id="sayi1" placeholder="1. Sayı">
+    <input type="number" id="sayi2" placeholder="2. Sayı">
+    <button id="btn">TOPLA</button>
+    <button id="btn" onclick="carp()">ÇARP</button>
+    <button id="btn" onclick="cikar()">ÇIKAR</button>
+    <button id="btn" onclick="bol()">BÖL</button>
+
+
+    <p id="demo">Toplam</p> <br>
+    <p id="demo1">Çarpım</p> <br>
+    <p id="demo2">Çıkart</p> <br>
+    <p id="demo3">Böl</p> <br>
+    <script>
+        var btnTopla = document.getElementById("btn");
+
+        btnTopla.onclick = function () {
+            var s1 = Number(document.getElementById("sayi1").value);
+            var s2 = Number(document.getElementById("sayi2").value);
+            var toplam = s1 + s2;
+            document.getElementById("demo").innerHTML = s1 + "+" + s2 + "=" + toplam;
+        }
+        function carp() {
+            var s1 = Number(document.getElementById("sayi1").value);
+            var s2 = Number(document.getElementById("sayi2").value);
+            var carpim = s1 * s2;
+            document.getElementById("demo1").innerHTML = s1 + "x" + s2 + "=" + carpim;
+        }
+        function cikar() {
+            var s1 = Number(document.getElementById("sayi1").value);
+            var s2 = Number(document.getElementById("sayi2").value);
+            var cikar = s1 - s2;
+            document.getElementById("demo2").innerHTML = s1 + "-" + s2 + "=" + cikar;
+        }
+        function bol() {
+            var s1 = Number(document.getElementById("sayi1").value);
+            var s2 = Number(document.getElementById("sayi2").value);
+            var bol = s1 / s2;
+            document.getElementById("demo3").innerHTML = s1 + "/" + s2 + "=" + bol;
+        }
+    </script>
+
+
+</body>
+
+</html>
